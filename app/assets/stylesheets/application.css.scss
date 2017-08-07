@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: serif;
+}
+
+
+/* ===== ヘッダー ===== */
+.header {
+  background-color: #705DA8;
+  padding: 20px 0;
+}
+
+.header_inner {
+  color: #FFFFFF;
+
+  a {
+    text-decoration: none;
+  }
+
+  a:link{
+    color: #FFFFFF;
+  }
+
+  a:visited {
+    color: #FFFFFF;
+  }
+
+  a:hover {
+    color: #FFFFFF;
+  }
+
+  a:active {
+    color: #FFFFFF;
+  }
+}
+
+/* ----- タイトル ----- */
+h1.title {
+  margin: 5px 10px;
+}
+
+/* ===== コンテンツ ===== */
+.content {
+  padding: 10px 5px;
+}
+
+/* ===== フッター ===== */
+.footer {
+  background-color: #705DA8;
+}
+
+.footer_inner {
+  color: #FFFFFF;
+}
+
+
+
+/* ===== 各画面サイズの設定 ===== */
+@media (min-width: 640px) {
+  
+}
+
+@media (min-width: 641px) and (max-width: 1039px) {
+
+}
+
+@media (min-width: 1040px) {
+  .header_inner, .content, .footer_inner {
+    margin: 0 auto;
+    width: 1000px;
+  }
+
+}
+
+// clerfix
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}

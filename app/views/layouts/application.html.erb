@@ -2,13 +2,30 @@
 <html>
 <head>
   <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+
+  <div class="header">
+    <div class="header_inner">
+      <%= render 'shared/header' %>
+    </div>
+  </div>
+
+
+  <div class="content">
+    <%= yield %>
+  </div>
+
+
+  <div class="footer">
+    <div class="footer_inner">
+      <%= render 'shared/footer' %>
+    </div>
+  </div>
 
 </body>
 </html>
