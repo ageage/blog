@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 * {
@@ -23,11 +24,15 @@ body {
   font-family: serif;
 }
 
+$themeColor: #705DA8;
 
 /* ===== ヘッダー ===== */
+
 .header {
-  background-color: #705DA8;
+  background-color: $themeColor;
+  margin-bottom: 20px;
   padding: 20px 0;
+  height: 100px;
 }
 
 .header_inner {
@@ -35,49 +40,160 @@ body {
 
   a {
     text-decoration: none;
-  }
 
-  a:link{
-    color: #FFFFFF;
-  }
-
-  a:visited {
-    color: #FFFFFF;
-  }
-
-  a:hover {
-    color: #FFFFFF;
-  }
-
-  a:active {
-    color: #FFFFFF;
+    &:link {
+      color: #FFFFFF;
+    }
+    &:visited {
+      color: #FFFFFF;
+    }
+    &:hover {
+      color: #FFFFFF;
+    }
+    &:active {
+      color: #FFFFFF;
+    }
   }
 }
 
-/* ----- タイトル ----- */
+/* ===== タイトル ===== */
 h1.title {
   margin: 5px 10px;
 }
 
 /* ===== コンテンツ ===== */
 .content {
+  min-height: calc(100vh - 140px - 100px);
   padding: 10px 5px;
 }
 
 /* ===== フッター ===== */
 .footer {
-  background-color: #705DA8;
+  background-color: $themeColor;
+  margin-top: 20px;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
 }
 
 .footer_inner {
   color: #FFFFFF;
 }
 
+/* ----- 投稿一覧 ----- */
+div.post {
+  margin: 20px 0;
+  padding: 1.5rem;
+  border: solid 1px #DDDDDD;
 
+  a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px #DDDDDD;
+  }
+
+  .post_header {
+    padding-bottom: 10px;
+    border-bottom: dashed 1px $themeColor;
+
+    .title {
+      margin: 10px;
+    }
+
+    .fa-clock-o {
+      color: #BBBBBB;
+      margin: 0 5px;
+    }
+
+    .posted_at {
+      display: inline;
+    }
+  }
+
+  .post_body {
+    margin-top: 20px;
+  }
+}
+
+/* ----- ページネーション ----- */
+.pagination {
+  text-align: center;
+
+  .pagination_nav {
+    display: inline-block;
+    
+    span {
+      display: inline-block;
+      float: left;
+      border-top: solid 1px #BBBBBB;
+      border-bottom: solid 1px #BBBBBB;
+      border-right: solid 1px #BBBBBB;
+
+      &:first-child {
+        border-left: solid 1px #BBBBBB;
+      }
+
+      &.current, &.gap {
+        padding: 10px;
+        opacity: 0.6;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+
+      &:hover {
+        background-color: #BBBBBB;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+/* ----- 投稿詳細 ----- */
+div.post_detail {
+  margin: 20px 0;
+  padding: 1.5rem;
+  border: solid 1px #DDDDDD;
+
+  .post_detail_header {
+    padding-bottom: 10px;
+    border-bottom: dashed 1px $themeColor;
+
+    .title {
+      margin: 10px;
+    }
+
+    .fa-clock-o {
+      color: #BBBBBB;
+      margin: 0 5px;
+    }
+
+    .posted_at {
+      display: inline;
+    }
+  }
+
+  .post_detail_body {
+    margin-top: 20px;
+  }
+}
 
 /* ===== 各画面サイズの設定 ===== */
 @media (min-width: 640px) {
-  
+
 }
 
 @media (min-width: 641px) and (max-width: 1039px) {
@@ -92,9 +208,10 @@ h1.title {
 
 }
 
-// clerfix
+/* ----- clerfix ----- */
 .clearfix:after {
   content: "";
   display: block;
   clear: both;
 }
+

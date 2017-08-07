@@ -1,0 +1,13 @@
+<% if @posts.present? %>
+  <% @posts.each do |post| %>
+    <%= link_to post do %>
+      <div class="post">
+        <div class="post_header">
+          <p class="post_title">タイトル：<%= post.title %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% else %>
+  <p>記事が存在しません。</p>
+<% end %>

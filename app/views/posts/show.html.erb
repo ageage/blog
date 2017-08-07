@@ -1,0 +1,9 @@
+<div class="post_detail">
+  <div class="post_detail_header">
+    <h2 class="title"><%= @post.title %></h2>
+    <%= fa_icon 'clock-o' %><p class="posted_at"><%= @post.posted_at.strftime("%Y.%m.%d %H:%S") %></p>
+  </div>
+  <div class="post_detail_body">
+    <%= html_escape @post.body %>
+  </div>
+</div>
