@@ -1,5 +1,5 @@
 class TopController < ApplicationController
   def index
-    @posts = Post.all.order(:posted_at).page(params[:page])
+    @posts = Post.common.order(posted_at: :desc).page(params[:page])
   end
 end

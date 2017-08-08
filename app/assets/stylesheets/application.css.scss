@@ -56,8 +56,8 @@ $themeColor: #705DA8;
   }
 }
 
-/* ===== タイトル ===== */
-.blog_title {
+/* ===== ブログ名 ===== */
+.blog_name {
   margin: 5px 10px;
 }
 
@@ -93,7 +93,6 @@ a.post {
 
 }
 
-
 div.post {
   margin: 20px 0;
   padding: 1.5rem;
@@ -124,17 +123,17 @@ div.post {
 
 /* ----- タグ ----- */
 div.tags {
-  .fa-tags{
+  .fa-tags {
     color: #BBBBBB;
     margin: 0 5px;
   }
-  
+
   span {
     display: inline-block;
     background-color: $themeColor;
     color: #FFFFFF;
     padding: 0 5px;
-    border-radius: 5px; 
+    border-radius: 5px;
   }
 }
 
@@ -144,7 +143,7 @@ div.tags {
 
   .pagination_nav {
     display: inline-block;
-    
+
     span {
       display: inline-block;
       color: #000000;

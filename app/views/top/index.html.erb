@@ -1,10 +1,10 @@
 <% if @posts.present? %>
-    <% @posts.each do |post| %>
-        <%= link_to post, class: 'post' do %>
-            <%= render partial: 'shared/post', locals: { post: post, detailed: false} %>
-        <% end %>
+  <% @posts.each do |post| %>
+    <%= link_to post, class: 'post' do %>
+      <%= render partial: 'shared/post', locals: {post: post, detailed: false} %>
     <% end %>
-    <%= paginate @posts %>
+  <% end %>
+  <%= paginate @posts %>
 <% else %>
-    <p>記事が存在しません。</p>
+  <p>記事が存在しません。</p>
 <% end %>

@@ -1,6 +1,6 @@
 number_of_posts = 50
 
-STATUS_VALUES = %w(draft public)
+STATUS_VALUES = %w(private public)
 TAGS = [['プログラミング', 'Rails', 'Ruby'], ['日常','筋トレ'], ['日常', 'コーヒー']]
 
 number_of_posts.times do |i|

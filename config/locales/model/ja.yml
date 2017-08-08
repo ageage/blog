@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      admin_user: 管理者
+      comment: コメント
+      post: 投稿
+    attributes:
+      admin_user:
+        email: メールアドレス
+        current_sign_in_at: 最新ログイン日時
+        sign_in_count: ログイン回数
+        created_at: 作成日時
+      post:
+        title: タイトル
+        body: 本文
+        posted_at: 投稿日時
+        status: ステータス
+        created_at: 作成日時
+        updated_at: 更新日時
