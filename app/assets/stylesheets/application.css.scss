@@ -57,7 +57,7 @@ $themeColor: #705DA8;
 }
 
 /* ===== タイトル ===== */
-h1.title {
+.blog_title {
   margin: 5px 10px;
 }
 
@@ -81,28 +81,30 @@ h1.title {
   color: #FFFFFF;
 }
 
-/* ----- 投稿一覧 ----- */
-div.post {
-  margin: 20px 0;
-  padding: 1.5rem;
-  border: solid 1px #DDDDDD;
-
-  a {
-    display: block;
-    color: #000000;
-    text-decoration: none;
-  }
+/* ----- 投稿 ----- */
+a.post {
+  display: block;
+  color: #000000;
+  text-decoration: none;
 
   &:hover {
     box-shadow: 0 0 10px #DDDDDD;
   }
+
+}
+
+
+div.post {
+  margin: 20px 0;
+  padding: 1.5rem;
+  border: solid 1px #DDDDDD;
 
   .post_header {
     padding-bottom: 10px;
     border-bottom: dashed 1px $themeColor;
 
     .title {
-      margin: 10px;
+      margin: 10px 0;
     }
 
     .fa-clock-o {
@@ -120,6 +122,22 @@ div.post {
   }
 }
 
+/* ----- タグ ----- */
+div.tags {
+  .fa-tags{
+    color: #BBBBBB;
+    margin: 0 5px;
+  }
+  
+  span {
+    display: inline-block;
+    background-color: $themeColor;
+    color: #FFFFFF;
+    padding: 0 5px;
+    border-radius: 5px; 
+  }
+}
+
 /* ----- ページネーション ----- */
 .pagination {
   text-align: center;
@@ -129,6 +147,7 @@ div.post {
     
     span {
       display: inline-block;
+      color: #000000;
       float: left;
       border-top: solid 1px #BBBBBB;
       border-bottom: solid 1px #BBBBBB;
@@ -145,6 +164,7 @@ div.post {
     }
 
     a {
+      color: #000000;
       text-decoration: none;
       display: block;
       padding: 10px;
@@ -159,35 +179,6 @@ div.post {
       display: block;
       clear: both;
     }
-  }
-}
-
-/* ----- 投稿詳細 ----- */
-div.post_detail {
-  margin: 20px 0;
-  padding: 1.5rem;
-  border: solid 1px #DDDDDD;
-
-  .post_detail_header {
-    padding-bottom: 10px;
-    border-bottom: dashed 1px $themeColor;
-
-    .title {
-      margin: 10px;
-    }
-
-    .fa-clock-o {
-      color: #BBBBBB;
-      margin: 0 5px;
-    }
-
-    .posted_at {
-      display: inline;
-    }
-  }
-
-  .post_detail_body {
-    margin-top: 20px;
   }
 }
 

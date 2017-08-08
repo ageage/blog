@@ -1,0 +1,16 @@
+<% if post.present? %>
+    <div class="post">
+      <div class="post_header">
+        <h2 class="title"><%= post.title %></h2>
+        <%= fa_icon 'clock-o' %><p class="posted_at"><%= post.posted_at.strftime('%Y.%m.%d') %></p>
+        <%= render 'shared/tags', tag_list: post.tag_list %>
+      </div>
+      <div class="post_body">
+        <% if detailed %>  
+            <%= html_escape post.body %>
+        <% else %>
+            <%= truncate html_escape(post.body), length: 400, omission: '...' %>
+        <% end %>
+      </div>
+    </div>
+<% end %>
