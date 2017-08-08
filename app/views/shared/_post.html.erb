@@ -7,9 +7,9 @@
       </div>
       <div class="post_body">
         <% if detailed %>  
-            <%= html_escape post.body %>
+            <%= markdown post.body %>
         <% else %>
-            <%= truncate html_escape(post.body), length: 400, omission: '...' %>
+            <%= markdown truncate(post.body, length: 400, omission: '...') %>
         <% end %>
       </div>
     </div>
