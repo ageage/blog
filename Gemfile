@@ -37,7 +37,9 @@ gem 'kaminari'
 gem 'acts-as-taggable-on'
 gem 'activeadmin'
 gem 'devise'
-gem 'redcarpet', '2.3.0'
+gem 'redcarpet'
+gem 'pygments.rb'
+gem 'nokogiri'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
