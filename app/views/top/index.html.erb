@@ -1,8 +1,6 @@
 <% if @posts.present? %>
   <% @posts.each do |post| %>
-    <%= link_to post, class: 'post' do %>
-      <%= render partial: 'shared/post', locals: {post: post, detailed: false} %>
-    <% end %>
+    <%= render partial: 'shared/post', locals: {post: post, detailed: false} %>
   <% end %>
   <%= paginate @posts %>
 <% else %>

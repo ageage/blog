@@ -18,7 +18,9 @@ markdown_text = <<EOS
 # h1
 ## h2
 ### h3
-#### h4
+#### h4 
+##### h5
+###### h6
 
 段落
 
@@ -97,6 +99,8 @@ int main(void) {
   std::cout << "Hello, World!!" << std::endl;
 }
 ```
+    
+![猫](https://s3-ap-northeast-1.amazonaws.com/age-blog/images/20170630_201153665.jpg "猫")
 
 EOS
 

@@ -10,9 +10,10 @@
 
   h2 {
     margin: 0.8em 0;
+    padding: 0.3em 0.5em;
     border-left: solid 5px $themeColor;
-    border-bottom: solid 1px $themeColor;
-    padding-left: 10px;
+    border-bottom: solid 3px #D7D7D7;
+    background-color: #f4f4f4;
   }
 
   p, li {
