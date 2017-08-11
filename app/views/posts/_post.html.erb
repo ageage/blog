@@ -5,7 +5,7 @@
         <%= link_to_unless_current post.title, post, class: 'post' %>
       </h2>
       <%= fa_icon 'clock-o' %><p class="posted_at"><%= post.posted_at.strftime('%Y.%m.%d') %></p>
-      <%= render 'shared/tags', tag_list: post.tag_list %>
+      <%= render 'posts/tags', tag_list: post.tag_list %>
     </div>
     <div class="post_body">
       <div class="markdown_view">

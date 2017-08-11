@@ -1,11 +1,10 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.page(params[:page]).per(5)
+    @posts = Post.common.order(posted_at: :desc).page(params[:page])
   end
 
   def show
-    
     @post = Post.find(params[:id])
   end
 
@@ -18,7 +17,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    
+
   end
 
   def update
@@ -26,6 +25,18 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    
+
+  end
+
+  def tags
+    if view_context.parameter_tags.present?
+      @posts = Post.common
+                   .order(posted_at: :desc)
+                   .page(params[:page])
+                   .tagged_with(view_context.parameter_tags, any: true)
+      render :index
+    else
+      redirect_to action: 'index'
+    end
   end
 end

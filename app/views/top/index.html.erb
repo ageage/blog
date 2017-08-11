@@ -1,8 +1,0 @@
-<% if @posts.present? %>
-  <% @posts.each do |post| %>
-    <%= render partial: 'shared/post', locals: {post: post, detailed: false} %>
-  <% end %>
-  <%= paginate @posts %>
-<% else %>
-  <p>記事が存在しません。</p>
-<% end %>

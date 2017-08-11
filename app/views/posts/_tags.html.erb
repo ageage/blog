@@ -1,0 +1,9 @@
+<% if tag_list.present? %>
+  <ul class="tags">
+    <% tag_list.each_with_index do |tag, index| %>
+      <li class="tag <%= tag %>">
+        <%= link_to tag, tags_posts_path(tags: (parameter_tags | [tag])) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

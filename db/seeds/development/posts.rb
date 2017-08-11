@@ -110,5 +110,5 @@ post = Post.new(
     posted_at: Time.now,
     status: Post::STATUS_PUBLIC
 )
-post.tag_list.add(TAGS[0])
+post.tag_list.add(TAGS)
 post.save

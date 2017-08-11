@@ -116,40 +116,57 @@ div.post {
       opacity: 0.8;
     }
   }
-  .post_body {
-    margin-top: 20px;
-  }
 }
 
 /* ----- タグ ----- */
 ul.tags {
-  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
   li {
-    float: left;
-    margin: 0.2em 0.5em 0.2em 0;
+    display: inline-block;
+    margin: 0 1em 0 0;
+    padding: 0;
 
     a {
-      display: block;
-      padding: 0 0.3em ;
-      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      height: 24px;
+      line-height: 24px;
+      font-size: 13px;
       color: #FFFFFF;
+      padding: 0 1em;
       background-color: $themeColor;
-      border-radius: 5px;
-    }
-  }
-  span {
-    display: inline-block;
-    background-color: $themeColor;
-    color: #FFFFFF;
-    padding: 0 5px;
-    border-radius: 5px;
-  }
+      border-radius: 3px 0 0 3px;
+      text-decoration: none;
 
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
+      &:before {
+        position: absolute;
+        top: 0;
+        right: -24px;
+        content: "";
+        border: solid 12px transparent;
+        border-left: solid 12px $themeColor;
+      }
+
+      &:after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: block;
+        content: "";
+        width: 6px;
+        height: 6px;
+        margin-top: -3px;
+        background-color: #FFFFFF;
+        border-radius: 100%;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 }
 

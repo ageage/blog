@@ -1,13 +1,20 @@
 <% if @posts.present? %>
-  <% @posts.each do |post| %>
-    <%= link_to post do %>
-      <div class="post">
-        <div class="post_header">
-          <p class="post_title">タイトル：<%= post.title %></p>
-        </div>
-      </div>
-    <% end %>
+  <% if parameter_tags.present? %>
+    <div class="refine_post">
+      <ul class="tags">
+        <% parameter_tags.each do |refine_tag| %>
+          <li><%= link_to tags_posts_path(tags: (parameter_tags - [refine_tag])) do %>
+              <span> <%= "☓ #{refine_tag}" %></span>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
+  <% @posts.each do |post| %>
+    <%= render partial: 'posts/post', locals: {post: post, detailed: false} %>
+  <% end %>
+  <%= paginate @posts %>
 <% else %>
   <p>記事が存在しません。</p>
 <% end %>
