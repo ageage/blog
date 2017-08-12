@@ -1,0 +1,27 @@
+<%= link_to '投稿の新規作成', :new_admin_post %>
+
+<table class="posts">
+  <tr>
+    <th>id</th>
+    <th>title</th>
+    <th>body</th>
+    <th>posted_at</th>
+    <th>status</th>
+    <th>操作</th>
+  </tr>
+  <% if @posts.present? %>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.id %></td>
+        <td><%= post.title %></td>
+        <td><%= post.body %></td>
+        <td><%= post.posted_at %></td>
+        <td><%= post.status %></td>
+        <td><%= link_to '閲覧', [:admin, post] %>
+        <%= link_to '編集', [:edit, :admin , post] %>
+        <%= link_to '削除', [:admin, post], method: :delete, data: {confirm: '本当に削除しますか?'} %></td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+<%= paginate @posts %>

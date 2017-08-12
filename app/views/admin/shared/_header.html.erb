@@ -1,4 +1,2 @@
-<%= link_to '#' do %>
-  <h1 class="blog_name"><%= blog_name %></h1>
-<% end %>
-<p>日常、プログラミング関連のことを書きます。</p>
+<%= link_to_unless_current '投稿一覧', :admin_posts %>
+<%= link_to 'サインアウト', :destroy_admin_admin_user_session, method: :delete %>

@@ -13,5 +13,6 @@ Rails.application.routes.draw do
         registrations: 'admin/admin_user/registrations',
         sessions: 'admin/admin_user/sessions'
     }
+    resources :posts
   end
 end

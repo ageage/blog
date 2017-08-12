@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="main">
+<body class="admin">
 
 
   <div class="header">
@@ -18,13 +18,6 @@
 
   <div class="content">
     <%= yield %>
-  </div>
-
-
-  <div class="footer">
-    <div class="footer_inner">
-      <%= render 'admin/shared/footer' %>
-    </div>
   </div>
 
 </body>
