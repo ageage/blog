@@ -1,0 +1,28 @@
+<table>
+  <%= form_for [:admin, post] do |f| %>
+    <tr>
+      <th><%= f.label :title %></th>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :body %></th>
+      <td><%= f.text_area :body, rows: 10, cols: 100 %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :posted_at %></th>
+      <td><%= f.datetime_select :posted_at, default: Time.now %></td>
+    </tr>
+    <tr>
+      <th><%= f.label t('views.post.status'), for: "post_status_#{Post::STATUS_PRIVATE}" %></th>
+      <td>
+        <%= f.label t('views.post.private'), for: "post_status_#{Post::STATUS_PRIVATE}" %>
+        <%= f.radio_button :status, Post::STATUS_PRIVATE %>
+        <%= f.label t('views.post.public'), for: "post_status_#{Post::STATUS_PUBLIC}" %>
+        <%= f.radio_button :status, Post::STATUS_PUBLIC %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= f.submit %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,13 +1,1 @@
-<%= form_for [:admin, @post] do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :body %>
-  <%= f.text_area :body %>
-  <%= f.label :posted_at %>
-  <%= f.datetime_select :posted_at, default: Time.now %>
-  <%= f.label t('views.post.private'), for: "post_status_#{Post::STATUS_PRIVATE}" %>
-  <%= f.radio_button :status, Post::STATUS_PRIVATE %>
-  <%= f.label t('views.post.public'), for: "post_status_#{Post::STATUS_PUBLIC}" %>
-  <%= f.radio_button :status, Post::STATUS_PUBLIC %>
-  <%= f.submit %>
-<% end %>
+<%= render partial: 'admin/posts/form', locals: {post: @post} %>

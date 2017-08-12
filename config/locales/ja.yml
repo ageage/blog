@@ -210,6 +210,7 @@ ja:
       last: "&gt;&gt;"
       truncate: "..."
     post:
+      status: ステータス
       private: 非公開
       public: 公開
   adminuser:
