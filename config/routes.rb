@@ -6,4 +6,12 @@ Rails.application.routes.draw do
       get :tags
     end
   end
+
+  namespace :admin do
+    root 'top#index'
+    devise_for :admin_users, controllers: {
+        registrations: 'admin/admin_user/registrations',
+        sessions: 'admin/admin_user/sessions'
+    }
+  end
 end
