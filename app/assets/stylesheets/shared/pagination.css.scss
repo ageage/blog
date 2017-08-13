@@ -1,0 +1,43 @@
+/* ----- ページネーション ----- */
+.pagination {
+  text-align: center;
+
+  .pagination_nav {
+    display: inline-block;
+
+    span {
+      display: inline-block;
+      color: #000000;
+      float: left;
+      border-top: solid 1px #BBBBBB;
+      border-bottom: solid 1px #BBBBBB;
+      border-right: solid 1px #BBBBBB;
+
+      &:first-child {
+        border-left: solid 1px #BBBBBB;
+      }
+
+      &.current, &.gap {
+        padding: 10px;
+        opacity: 0.6;
+      }
+    }
+
+    a {
+      color: #000000;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+
+      &:hover {
+        background-color: #BBBBBB;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}

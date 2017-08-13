@@ -12,9 +12,9 @@ module ApplicationHelper
     BLOG_NAME
   end
 
-  def parameter_tags
-    if params[:tags].present?
-      params[:tags]
+  def parameter_tag_list
+    if params[:tag_list].present?
+      params[:tag_list]
     else
       []
     end

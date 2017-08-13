@@ -5,6 +5,10 @@
       <td><%= f.text_field :title %></td>
     </tr>
     <tr>
+      <th><%= f.label :tag_list %></th>
+      <td><%= f.text_field :tag_list, value: post.tag_list.join(',') %></td>
+    </tr>
+    <tr>
       <th><%= f.label :body %></th>
       <td><%= f.text_area :body, rows: 10, cols: 100 %></td>
     </tr>

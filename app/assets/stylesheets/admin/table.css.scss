@@ -1,0 +1,30 @@
+/* ----- テーブル、フォーム ----- */
+table.form,
+table.posts,
+table.post {
+  width: 100%;
+  border: solid 1px #CCCCCC;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+
+  th {
+    white-space: nowrap;
+  }
+
+  td {
+    font-size: 0.8em;
+  }
+
+  th, td {
+    padding: 1em;
+    border: solid 1px #CCCCCC;
+    input {
+      &[type=text] {
+        width: 100%;
+      }
+    }
+    textarea {
+      width: 100%;
+    }
+  }
+}

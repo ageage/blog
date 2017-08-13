@@ -1,0 +1,35 @@
+@import 'shared/common';
+
+/* ===== ヘッダー ===== */
+.header {
+  background-color: $themeColor;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  height: 100px;
+}
+
+.header_inner {
+  color: #FFFFFF;
+
+  a {
+    text-decoration: none;
+
+    &:link {
+      color: #FFFFFF;
+    }
+    &:visited {
+      color: #FFFFFF;
+    }
+    &:hover {
+      color: #FFFFFF;
+    }
+    &:active {
+      color: #FFFFFF;
+    }
+  }
+}
+
+/* ===== ブログ名 ===== */
+.blog_name {
+  margin: 5px 10px;
+}

@@ -1,0 +1,34 @@
+@import 'shared/common';
+
+/* ----- ナビゲーションバー ----- */
+div.navigation {
+  background-color: $adminThemeColor;
+  ul {
+    list-style-type: none;
+
+    li {
+      text-align: center;
+      width: 50%;
+      float: left;
+    }
+
+    a {
+      padding: 0.8em;
+      display: block;
+      text-decoration: none;
+      color: #FFFFFF;
+      background-color: $adminThemeColor;
+
+      &:hover {
+        background-color: #A6E22E;
+        color: #000000;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}

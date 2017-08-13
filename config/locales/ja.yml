@@ -210,9 +210,16 @@ ja:
       last: "&gt;&gt;"
       truncate: "..."
     post:
+      id: id
+      title: タイトル
+      tag: タグ
+      body: 本文
+      posted_at: 投稿日時
       status: ステータス
       private: 非公開
       public: 公開
+    posts:
+      operation: 操作
   adminuser:
     current_sign_in_at: 'ログイン時刻'
     last_sign_in_at: '前回ログイン時刻'

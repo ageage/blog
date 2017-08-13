@@ -13,13 +13,12 @@
  *= require normalize-rails
  *= require_self
  *= require font-awesome
- *= require shared/markdown
  */
 
 @import 'shared/common';
 @import 'shared/markdown';
-
-/* ===== ブログ名 ===== */
-.blog_name {
-  margin: 5px 10px;
-}
+@import 'shared/post';
+@import 'shared/tag';
+@import 'shared/pagination';
+@import 'header';
+@import 'footer';

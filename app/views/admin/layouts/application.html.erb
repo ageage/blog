@@ -16,15 +16,15 @@
   </div>
 
 
-  <div class="content">
-    <%= yield %>
+  <div class="navigation">
+    <div class="navigation_inner">
+      <%= render 'admin/shared/navigation' %>
+    </div>
   </div>
 
 
-  <div class="footer">
-    <div class="footer_inner">
-      <%= render 'shared/footer' %>
-    </div>
+  <div class="content">
+    <%= yield %>
   </div>
 
 </body>

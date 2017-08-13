@@ -1,0 +1,52 @@
+@import 'shared/common';
+
+/* ----- タグ ----- */
+ul.tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin: 0 1em 0 0;
+    padding: 0;
+    a {
+      position: relative;
+      display: inline-block;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1em;
+      background-color: $themeColor;
+      border-radius: 3px 0 0 3px;
+      color: #FFFFFF;
+      font-size: 13px;
+      text-decoration: none;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        right: -24px;
+        content: "";
+        border: solid 12px transparent;
+        border-left: solid 12px $themeColor;
+      }
+
+      &:after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: block;
+        content: "";
+        width: 6px;
+        height: 6px;
+        margin-top: -4px;
+        background-color: #FFFFFF;
+        border-radius: 100%;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -10,5 +10,5 @@ class Post < ActiveRecord::Base
   validates :body, :posted_at, presence: true
   validates :status, inclusion: {in: STATUS_VALUES}
 
-  scope :common, -> {where(status: STATUS_PUBLIC)}
+  scope :common, -> {where('status == ? AND posted_at <= ?', STATUS_PUBLIC, Time.now)}
 end

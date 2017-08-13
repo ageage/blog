@@ -29,11 +29,11 @@ class PostsController < ApplicationController
   end
 
   def tags
-    if view_context.parameter_tags.present?
+    if view_context.parameter_tag_list.present?
       @posts = Post.common
                    .order(posted_at: :desc)
                    .page(params[:page])
-                   .tagged_with(view_context.parameter_tags, any: true)
+                   .tagged_with(view_context.parameter_tag_list, any: true)
       render :index
     else
       redirect_to action: 'index'

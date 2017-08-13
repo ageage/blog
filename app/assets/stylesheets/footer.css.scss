@@ -1,0 +1,15 @@
+@import 'shared/common';
+
+/* ===== フッター ===== */
+.footer {
+  background-color: $themeColor;
+  margin-top: 20px;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.footer_inner {
+  color: #FFFFFF;
+}

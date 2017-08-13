@@ -2,7 +2,7 @@
   <ul class="tags">
     <% tag_list.each_with_index do |tag| %>
       <li class="tag <%= tag %>">
-        <%= link_to tag, tags_posts_path(tags: (parameter_tags | [tag])) %>
+        <%= link_to tag, tags_posts_path(tag_list: (parameter_tag_list | [tag])) %>
       </li>
     <% end %>
   </ul>

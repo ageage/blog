@@ -1,21 +1,24 @@
+<% @page_title = '投稿一覧' %>
 <%= link_to '投稿の新規作成', :new_admin_post %>
 
 <table class="posts">
   <tr>
-    <th>id</th>
-    <th>title</th>
-    <th>body</th>
-    <th>posted_at</th>
-    <th>status</th>
-    <th>操作</th>
+    <th><%= t 'views.post.id' %></th>
+    <th><%= t 'views.post.title' %></th>
+    <th><%= t 'views.post.tag' %></th>
+    <th><%= t 'views.post.body' %></th>
+    <th><%= t 'views.post.posted_at' %></th>
+    <th><%= t 'views.post.status' %></th>
+    <th><%= t 'views.posts.operation' %></th>
   </tr>
   <% if @posts.present? %>
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.id %></td>
         <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= post.posted_at %></td>
+        <td><%= post.tag_list %></td>
+        <td><%= truncate post.body, length: 200, omission: '...' %></td>
+        <td><%= post.posted_at.strftime('%Y/%m/%d %H:%M') %></td>
         <td><%= post.status %></td>
         <td><%= link_to '閲覧', [:admin, post] %>
         <%= link_to '編集', [:edit, :admin , post] %>

@@ -14,21 +14,12 @@
  *= require_self
  *= require font-awesome
  */
+
 @import 'shared/common';
 @import 'shared/markdown';
-
-table.form,
-table.posts{
-  width: 100%;
-  border: solid 1px #CCCCCC;
-  border-collapse: collapse;
-
-  th, td {
-    padding: 1em;
-    border: solid 1px #CCCCCC;
-
-    textarea {
-      width: 100%;
-    }
-  }
-}
+@import 'shared/tag';
+@import 'shared/post';
+@import 'shared/pagination';
+@import 'header';
+@import 'navigation';
+@import 'table';
