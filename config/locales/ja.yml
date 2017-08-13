@@ -212,7 +212,7 @@ ja:
     post:
       id: id
       title: タイトル
-      tag: タグ
+      tag_list: タグ
       body: 本文
       posted_at: 投稿日時
       status: ステータス
