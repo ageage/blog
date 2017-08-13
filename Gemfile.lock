@@ -199,7 +199,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kaminari (~> 1.0.1)
-  mysql2
+  mysql2 (~> 0.3)
   nokogiri (~> 1.8.0)
   normalize-rails (~> 4.1.1)
   pygments.rb (~> 1.1.2)
