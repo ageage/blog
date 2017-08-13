@@ -1,2 +1,23 @@
-<%= render partial: 'admin/posts/form', locals: {post: @post} %>
-<%= link_to '戻る', [:admin, @post] %>
+<p>プレビュー</p>
+<% if @post.present? %>
+  <div class="post">
+    <div class="post_header">
+      <h2 class="title">
+        <%= @post.title %>
+      </h2>
+      <%= fa_icon 'clock-o' %><p class="posted_at"><%= @post.posted_at.strftime('%Y.%m.%d') %></p>
+      <ul class="tags">
+        <% @post.tag_list.each_with_index do |tag| %>
+          <li class="tag <%= tag %>">
+            <%= link_to tag, '#' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="post_body">
+      <div class="markdown_view">
+        <%= markdown @post.body %>
+      </div>
+    </div>
+  </div>
+<% end %>

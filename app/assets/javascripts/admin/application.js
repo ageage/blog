@@ -13,4 +13,9 @@
 //= require jquery.js
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+
+$(function () {
+    $('a[href="#"]').click(function () {
+        return false;
+    })
+});

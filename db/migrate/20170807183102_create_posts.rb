@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title, null: false
       t.string :body
       t.datetime :posted_at
-      t.string :status, null: false, default: "draft"
+      t.string :status, null: false, default: 'private'
 
       t.timestamps null: false
     end

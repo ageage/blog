@@ -18,7 +18,9 @@ class Admin::PostsController < Admin::ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
+    if params[:preview_button]
+      render template: 'admin/posts/preview'
+    elsif @post.save
       redirect_to [:admin, @post], notice: '投稿を作成しました。'
     else
       render 'new'
@@ -28,7 +30,9 @@ class Admin::PostsController < Admin::ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.assign_attributes(post_params)
-    if @post.save
+    if params[:preview_button]
+      render template: 'admin/posts/preview'
+    elsif @post.save
       redirect_to [:admin, @post], notice: '投稿を作成しました。'
     else
       render 'edit'
