@@ -16,14 +16,19 @@
   </div>
 
 
-  <div class="navigation">
-    <div class="navigation_inner">
-      <%= render 'admin/shared/navigation' %>
+  <% if signed_in? %>
+    <div class="navigation">
+      <div class="navigation_inner">
+        <%= render 'admin/shared/navigation' %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
 
   <div class="content">
+    <% if flash.notice %>
+      <p class="notice"><%= flash.notice %></p>
+    <% end %>
     <%= yield %>
   </div>
 

@@ -1,4 +1,5 @@
 class Admin::AdminUser::ConfirmationsController < Devise::ConfirmationsController
+  layout 'admin/layouts/application'
   # GET /resource/confirmation/new
   # def new
   #   super
