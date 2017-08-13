@@ -98,7 +98,7 @@ GEM
     mini_portile2 (2.2.0)
     minitest (5.10.3)
     multi_json (1.12.1)
-    mysql2 (0.4.9)
+    mysql2 (0.3.21)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     normalize-rails (4.1.1)
@@ -199,7 +199,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kaminari (~> 1.0.1)
-  mysql2 (~> 0.3)
+  mysql2 (~> 0.3.13)
   nokogiri (~> 1.8.0)
   normalize-rails (~> 4.1.1)
   pygments.rb (~> 1.1.2)
