@@ -1,5 +1,5 @@
 module ApplicationHelper
-  BLOG_NAME = 'ageage'
+  BLOG_NAME = 'アゲブログ'
   BLOG_NAME.freeze
 
   def page_title
