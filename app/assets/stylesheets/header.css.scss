@@ -5,7 +5,7 @@
   background-color: $themeColor;
   margin-bottom: 20px;
   padding: 20px 0;
-  height: 100px;
+  height: 20%;
 }
 
 .header_inner {
@@ -26,6 +26,10 @@
     &:active {
       color: #FFFFFF;
     }
+  }
+
+  p {
+    margin: 0.5em
   }
 }
 
