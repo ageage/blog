@@ -4,7 +4,7 @@
       <ul class="tags">
         <% parameter_tag_list.each do |refine_tag| %>
           <li><%= link_to tags_posts_path(tag_list: (parameter_tag_list - [refine_tag])) do %>
-              <span> <%= "☓ #{refine_tag}" %></span>
+              <span> <%= "× #{refine_tag}" %></span>
             <% end %>
           </li>
         <% end %>
