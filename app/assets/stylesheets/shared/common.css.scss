@@ -2,6 +2,16 @@
 
 $themeColor: #705DA8;
 $adminThemeColor: #55564B;
+$headerHeight: 100px;
+$headerPaddingTop: 10px;
+$headerPaddingBottom: 20px;
+$headerMarginBottom: 20px;
+$headerPartHeight: $headerHeight + $headerPaddingTop + $headerPaddingBottom + $headerMarginBottom;
+$footerHeight: 30px;
+$footerMarginTop: 20px;
+$footerPartHeight: $footerHeight + $footerMarginTop;
+$contentPaddingTop: 10px;
+$contentPaddingBottom: 10px;
 
 * {
   margin: 0;
@@ -14,8 +24,8 @@ body {
 
 /* ===== コンテンツ ===== */
 .content {
-  min-height: calc(100vh - 140px - 100px);
-  padding: 10px 5px;
+  min-height: calc(100vh - #{$contentPaddingTop} - #{$contentPaddingBottom} - #{$headerPartHeight} - #{$footerPartHeight});
+  padding: $contentPaddingTop 5px $contentPaddingBottom 5px;
 }
 
 /* ===== 各画面サイズの設定 ===== */

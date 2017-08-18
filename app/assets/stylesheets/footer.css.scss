@@ -3,10 +3,11 @@
 /* ===== フッター ===== */
 .footer {
   background-color: $themeColor;
-  margin-top: 20px;
+  margin-top: $footerMarginTop;
   position: static;
   bottom: 0;
   width: 100%;
+  height: $footerHeight;
 }
 
 .footer_inner {

@@ -3,9 +3,9 @@
 /* ===== ヘッダー ===== */
 .header {
   background-color: $themeColor;
-  margin-bottom: 20px;
-  padding: 20px 0;
-  height: 20%;
+  margin-bottom: $headerMarginBottom;
+  padding: $headerPaddingTop 0 $headerPaddingBottom 0;
+  height: $headerHeight;
 }
 
 .header_inner {
