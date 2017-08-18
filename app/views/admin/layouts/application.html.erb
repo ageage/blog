@@ -6,6 +6,7 @@
   <%= stylesheet_link_tag 'admin/application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'admin/application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= analytics_init if Rails.env.production? %>
 </head>
 <body class="main">
 

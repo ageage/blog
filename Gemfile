@@ -19,6 +19,7 @@ gem 'pygments.rb', '~> 1.1.2'
 gem 'nokogiri', '~> 1.8.0'
 gem 'normalize-rails', '~> 4.1.1'
 gem 'devise', '~> 4.3.0'
+gem 'google-analytics-rails'
 
 group :development, :test do
   gem 'sqlite3'
