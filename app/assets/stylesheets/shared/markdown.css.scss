@@ -2,18 +2,24 @@
 
 .markdown_view {
   * {
-    margin: 0.5em 0;
+    margin: 0.3em 0;
   }
   h1, h2, h3, h4, h5, h6, table {
-    margin-bottom: 0.8em;
+    margin: 0.8em 0 0.4em;
   }
 
   h2 {
-    border-bottom: solid 1px #D7D7D7;
+    padding: 5px;
+    border-left: solid 5px $themeColor;
+    border-bottom: solid 1px $themeColor;
+  }
+
+  h3 {
+    border-bottom: dotted 1px $themeColor;
   }
 
   p, li {
-    margin: 0.5em 0;
+    line-height: 2em;
   }
 
   ul, ol {
@@ -57,9 +63,9 @@
   }
 
   code {
-    padding: 0 0.5em;
+    padding: 0 0.2em;
     border: solid 1px #CCCCCC;
-    border-radius: 5px;
+    border-radius: 4px;
   }
 
   // syntax highlight

@@ -29,12 +29,16 @@ body {
 }
 
 /* ===== 各画面サイズの設定 ===== */
-@media (min-width: 640px) {
-
+@media (max-width: 640px) {
+  html {
+    font-size: 75%;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 1039px) {
-
+  html {
+    font-size: 85%;
+  }
 }
 
 @media (min-width: 1040px) {
