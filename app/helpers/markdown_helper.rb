@@ -24,7 +24,7 @@ module MarkdownHelper
           lexer: get_lexer_or_else(pre.child)
       ))
     end
-    doc.to_s
+    doc.to_s.gsub(/\R?(<!DOCTYPE.*>|<\/?html>|<\/?body>)\R?/, '')
   end
 
   def get_lexer_or_else(element, default='text')
