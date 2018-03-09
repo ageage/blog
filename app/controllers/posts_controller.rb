@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :set_all_tags, only: [:index, :tags]
 
   def index
     @posts = Post.common.order(posted_at: :desc).page(params[:page])
@@ -38,5 +39,11 @@ class PostsController < ApplicationController
     else
       redirect_to action: 'index'
     end
+  end
+
+  private
+
+  def set_all_tags
+    @all_tags = ActsAsTaggableOn::Tag.all.map { |tag| tag.name }
   end
 end
