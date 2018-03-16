@@ -12,7 +12,7 @@
         <% if detailed %>
           <%= markdown post.body %>
         <% else %>
-          <%= markdown truncate(post.body, length: 200, omission: '...') %>
+          <%= markdown truncate(strip_tagas(post.body), length: 200, omission: '...') %>
         <% end %>
       </div>
     </div>
