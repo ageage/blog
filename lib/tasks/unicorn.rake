@@ -1,4 +1,4 @@
-mespace :unicorn do
+namespace :unicorn do
   task(:stop) do
     signal_to_unicorn(:QUIT)
   end
