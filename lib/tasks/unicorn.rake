@@ -1,5 +1,6 @@
 namespace :unicorn do
   task(:start) do
+    raise 'Unicorn is already running.' if File.exist?('tmp/unicorn.pid')
     config_path = Rails.root.join('config/unicorn.rb')
     environment = 'production'
     `bundle exec unicorn_rails -c #{config_path} -E #{environment} -D`
