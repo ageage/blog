@@ -1,4 +1,10 @@
 namespace :unicorn do
+  task(:start) do
+    config_path = Rails.root.join('config/unicorn.rb')
+    environment = 'production'
+    `bundle exec unicorn_rails -c #{config_path} -E #{environment} -D`
+  end
+
   task(:stop) do
     signal_to_unicorn(:QUIT)
   end
