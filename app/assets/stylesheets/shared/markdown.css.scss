@@ -74,14 +74,17 @@
   }
 
   // syntax highlight
-  .highlight {
+  div.highlight {
     color: #FFFFFF;
     margin: 0.5em 0;
     pre {
-      font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
       padding: 10px;
       background-color: #55564b;
       overflow: scroll;
+      code {
+        font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+        border: none;
+      }
       .hll {
         background-color: #272822;
       }
