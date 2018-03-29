@@ -9,26 +9,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def new
-
-  end
-
-  def edit
-
-  end
-
-  def create
-
-  end
-
-  def update
-
-  end
-
-  def destroy
-
-  end
-
   def tags
     if view_context.parameter_tag_list.present?
       @posts = Post.common
