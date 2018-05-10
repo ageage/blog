@@ -36,7 +36,7 @@ class Admin::PostsController < Admin::ApplicationController
     if params[:preview_button]
       render template: 'admin/posts/preview'
     elsif @post.save
-      redirect_to [:admin, @post], notice: '投稿を更新　しました。'
+      redirect_to [:admin, @post], notice: '投稿を更新しました。'
     else
       render 'edit'
     end
